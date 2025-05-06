@@ -1,0 +1,149 @@
+{
+    "data": [
+            {"ourQualities" : [
+                {
+                    "id": 1,
+                    "image": "./quality_food.svg",
+                    "title": "QUALITY FOOD",
+                    "description": "Here, quality is at the heart of everything we do. We believe that great food starts with the finest ingredients, and we’re committed to serving dishes that are fresh, flavorful, and crafted with care." 
+                },
+                {
+                    "id": 2,
+                    "image": "./super_taste.svg",
+                    "title": "SUPER TASTE",
+                    "description": "We don’t just serve food — we serve an unforgettable experience. Taste the difference that fresh ingredients, expert cooking, and a passion for flavor can make. One bite, and you’ll understand why our customers keep coming back for more." 
+                },
+                {
+                    "id": 3,
+                    "image": "./fast_delivery.svg",
+                    "title": "FAST SERVING",
+                    "description": "We know that great food should come with great service — and that includes getting your meal to you fast. Whether you're dining in or taking out, we ensure that every dish is served quickly and efficiently, without sacrificing the quality or flavor you love." 
+                }
+            ],
+            "dishes": [
+                {
+                    "id": 1,
+                    "image": "./dinner1.jpeg",
+                    "title": "ROASTED LAMB RUMP",
+                    "category": "Lunch"
+                },
+                {
+                    "id": 2,
+                    "image": "./dinner2.png",
+                    "title": "CITRUS CURED SALMON",
+                    "category": "Dinner"
+                },
+                {
+                    "id": 3,
+                    "image": "./breakfast1.png",
+                    "title": "PAN SEARED SEA",
+                    "category": "Lunch"
+                },
+                {
+                    "id": 4,
+                    "image": "./dinner3.png",
+                    "title": "STUFFED STRAWBERRY",
+                    "category": "Dinner"
+                },
+                {
+                    "id": 5,
+                    "image": "./lunch1.png",
+                    "title": "BEEF BURGER MEAL",
+                    "category": "Dinner"
+                },
+                {
+                    "id": 6,
+                    "image": "./dinner4.png",
+                    "title": "MUSSELS SOUP",
+                    "category": "Lunch"
+                },
+                {
+                    "id": 7,
+                    "image": "./dinner5.png",
+                    "title": "ITALIAN SPAGHETTI",
+                    "category": "Dinner"
+                },
+                {
+                    "id": 8,
+                    "image": "./dinner6.png",
+                    "title": "GRILLED FISH",
+                    "category": "Lunch"
+                }
+            ],
+            "team": [
+                {
+                    "id": 1,
+                    "image": "./hrudhay.jpg",
+                    "name": "HRUDHAY R",
+                    "designation": "Founder & Head Chef"
+                },
+                {
+                    "id": 2,
+                    "image": "./srikar.jpg",
+                    "name": "SRIKAR S",
+                    "designation": "Manager"
+                },
+                {
+                    "id": 3,
+                    "image": "./me(edited).jpg",
+                    "name": "G PRANEETH",
+                    "designation": "Senior Chef"
+                }
+            ],
+            "who_we_are": [
+                {
+                    "id": 1,
+                    "number": "6",
+                    "title": "Branches"
+                },
+                {
+                    "id": 2,
+                    "number": "15+",
+                    "title": "Chef In Kitchen"
+                },
+                {
+                    "id": 3,
+                    "number": "06",
+                    "title": "Years Of Experience"
+                },
+                {
+                    "id": 4,
+                    "number": "100+",
+                    "title": "Food Dishes"
+                }
+            ],
+            "navbarLinks": [
+                {
+                    "id": 1,
+                    "title": "HOME",
+                    "link": "heroSection"
+                },
+                {
+                    "id": 2,
+                    "title": "ABOUT US",
+                    "link": "about"
+                },
+                {
+                    "id": 3,
+                    "title": "SERVICES",
+                    "link": "qualities"
+                },
+                {
+                    "id": 4,
+                    "title": "MENU",
+                    "link": "menu"
+                },
+                {
+                    "id": 5,
+                    "title": "TEAM",
+                    "link": "team"
+                },
+                {
+                    "id": 6,
+                    "title": "RESERVATION",
+                    "link": "reservation"
+                }
+            ]
+        } 
+    ]
+}   

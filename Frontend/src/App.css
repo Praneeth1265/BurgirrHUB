@@ -1,0 +1,1612 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* *****************************MANAGER LOGIN STYLING********************************** */
+
+.manparent {
+  padding: 155px;
+  padding-left: 500px;
+  padding-right: 500px;
+  background: url("../public/burger_bg4.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.manparent .manlog {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.manparent .manlog h1{
+  /* border: 2px solid #ffffff; */
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  background-image: linear-gradient(135deg, #F12711 10%, #F5AF19 100%);
+  opacity: 0.8;
+}
+
+.manparent .manlog img{
+  background-size: cover;
+}
+
+.manparent .manlog .mandet {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.manparent .manlog .mandet input{
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(122, 10, 10, 0.579);
+  border: 2px solid rgb(255, 255, 255) ;
+  color: rgb(255, 255, 255);
+}
+.inp::placeholder{
+  color: rgb(255, 255, 255);
+}
+.inp{
+  border: none;
+}
+
+.manform {
+  text-align: center;
+}
+.manform label{
+  font-size: 21px;
+  color: rgb(122, 10, 10);
+}
+
+.manparent .manlog .mandetsub {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.accessbtn {
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  /* border-radius: 50%; */
+  background-color: rgb(122, 10, 10);
+  color: #ffffff;
+}
+
+.accessbtn:hover{
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+/* ********************MANAGER DASHBOARD STYLING*********************** */
+
+/* Container for the whole reservation section */
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  /* Branches should be stacked vertically */
+  align-items: flex-start;
+  /* Align items to the left */
+  gap: 20px;
+  /* Space between the branches */
+  padding: 20px;
+  margin-top: 80px;
+}
+
+/* Styling each branch column */
+.branch-column {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* Stack branch name at the top */
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Align all content to the left */
+  gap: 15px;
+  /* Space between branch name and reservation items */
+  width: 100%;
+  border: 3px solid #ffe592;
+  border-radius: 20px;
+}
+.branch-column:hover{
+  background-image: linear-gradient(120deg, #ffe592 0%, #ffbeac 100%);
+  /* border: none; */
+  border-top-right-radius: 40px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 40px;
+  transition: ease-in-out 0.5s;
+
+}
+
+.branch-column .btn {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px;
+    background-color: #f6d365;
+    border:none;
+    cursor: pointer;
+    margin: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Container for horizontal display of reservations within each branch */
+.reservation-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* Arrange reservations horizontally */
+  gap: 15px;
+  /* Space between reservation items */
+  overflow-x: auto;
+  /* Allow horizontal scrolling if needed */
+  width: 100%;
+  /* display: none; */
+}
+
+/* Individual reservation item */
+.reservation-item {
+  border: 2px solid black;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  width: 200px;
+  /* Adjust width of each reservation box */
+  background-color: #f9f9f9;
+  flex-shrink: 0;
+  /* Prevent items from shrinking */
+}
+
+/* Center the Delete button only */
+.reservation-item .delete-btn-container {
+  display: flex;
+  justify-content: center;
+  /* Center the button horizontally */
+  width: 100%;
+  /* Make sure the container spans the full width */
+  margin-top: 15px;
+  /* Add some space above the button */
+}
+
+.reservation-item button {
+  margin-top: 15px;
+  padding: 6px 14px;
+  background-color: #ff4d4d;
+  /* Red color for delete */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.reservation-item button:hover {
+  background-color: #ff1a1a;
+  /* Darker red on hover */
+}
+
+.reservation-item:hover {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.manager-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 20;
+}
+
+.back-to-home-btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: #f6d365;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.back-to-home-btn:hover {
+  background-color: #fda085;
+}
+
+
+/********************** NAVABAR STYLING **************************/
+/**********************************************************************************************************************/
+
+/* Base Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.445);
+  transition: background-color 0.3s ease;
+}
+
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 90px;
+  transition: 0.3s ease;
+}
+
+.nav1 .logo {
+  flex: 1;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+nav:hover .logo {
+  color: rgb(103, 187, 29);
+  cursor: pointer;
+}
+
+/* Navbar Links */
+.navLinks {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #a8e063;
+  /* background: linear-gradient(135deg, #a8e063, #56ab2f); Green gradient */
+
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Manager Button */
+.manbtn {
+  background-color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 2px solid #a8e063;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.manbtn:hover {
+  background-color: #a8e063;
+  color: #000000;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 1100px) {
+  .nav1 {
+    flex-direction: column;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .showmenu {
+    transform: translateY(0);
+  }
+
+  .navLinks .links {
+    flex-direction: column;
+  }
+
+  .menuBtn {
+    display: flex;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav1 .navLinks {
+    width: 95%;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav1 .navLinks {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/********************** HERO SECTION COMPONENT STYLING **************************/
+/**********************************************************************************************************************/
+/* Background */
+.heroSection {
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  /* background: url("../green-background.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.chef{
+  position: absolute;
+  top: 44px;
+  left: 450px;
+  width: 590px;
+  z-index: 10;
+}
+
+.slide-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-content {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+/* Glass Container */
+.slideshow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent for glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  height: 380px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  margin-top: 220px;
+}
+
+/* Slide Content */
+.slide-content {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  color: #333;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.tod_spl{
+  font-size: 28px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.slide-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.slide-subtitle {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.slide-description {
+  font-size: 16px;
+  color: #333;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+/* Image Styling */
+.slide-image {
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: auto;
+}
+
+/* Navigation Buttons */
+.prev-button,
+.next-button {
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  height: 350px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 2em;
+  background-color: transparent;
+  top: 50%;
+}
+
+.prev-button {
+  left: 5px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.next-button {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  right: 5px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/**********************************************************************************************************************/
+
+/******************* ABOUT US COMPONENT STYLING **************/
+/**********************************************************************************************************************/
+.about {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fbf2;
+}
+
+.about .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+}
+
+.about .container .banner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.about .container .banner img {
+  width: 100%;
+}
+
+.heading {
+  font-weight: 200;
+  font-size: 4rem;
+  color: #111;
+}
+
+.about .container .banner .mid {
+  width: 65%;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+.about .container .banner .top p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.about .container .banner a {
+  border: 1px solid black;
+  padding: 8px 28px;
+  border-radius: 30px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+}
+
+.about .container .banner a span {
+  margin-left: 1rem;
+  padding: 6px;
+  background: #111;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.about .container .banner a:hover {
+  color: #fff;
+  background: #111;
+  transition: ease-in-out 0.3s;
+}
+
+.about .container .banner a:hover span {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 1520px) {
+  .about {
+    padding: 30px 20px;
+  }
+
+  .about .container {
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 1050px) {
+  .about .container .banner:first-child {
+    padding-right: 30px;
+  }
+
+  .about .container .banner .mid {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 786px) {
+  .about .container {
+    flex-direction: column-reverse;
+  }
+
+  .about .container .banner img {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .about .container .banner:first-child {
+    padding: 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .about .container .banner img {
+    width: 100%;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/* QUALITIES COMPONENT STYLING */
+/*********************************************************************************************************************/
+.qualities {
+  display: flex;
+  height: 100vh;
+  padding: 75px 20px;
+  justify-content: center;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  align-items: center;
+  /* margin-top: 50px;
+  margin-bottom: 120px; */
+}
+
+.qualities .container {
+  min-width: 1500px;
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent for glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.qualities .container .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 100px;
+  border-right: 1px solid white; /* Add this line for the white narrow line */
+}
+
+/* Remove the border from the last card to avoid an extra line at the end */
+.qualities .container .card:last-child {
+  border-right: none;
+}
+
+.qualities .container .card img {
+  margin-bottom: 25px;
+}
+
+.qualities .container .card .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.qualities .container .card .description {
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+
+@media (max-width: 1520px) {
+  .qualities .container {
+    min-width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .qualities .container .card .title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .qualities .container .card {
+    padding: 0 30px;
+  }
+
+  .qualities .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 635px) {
+  .qualities .container .card {
+    flex: none;
+    width: 400px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 485px) {
+  .qualities .container .card {
+    width: 100%;
+  }
+}
+
+/*********************************************************************************************************************/
+
+/* MENU COMPONENT STYLING */
+/*********************************************************************************************************************/
+.menu {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.menu .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu .container .heading_section {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.menu .container .heading_section p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.menu .container .dishes_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu .container .dishes_container .card {
+  width: 25%;
+  position: relative;
+  padding: 20px 12.5px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.menu .container .dishes_container .card img {
+  width: 100%;
+  height: 370px;
+}
+
+.menu .container .dishes_container .card h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.menu .container .dishes_container .card button {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  padding: 8px 20px;
+  color: #fff;
+  background: linear-gradient(186deg, black, #7e7a7a8a);
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu .container .dishes_container .card:hover img {
+  transition: 0.3s;
+  transform: scale(1.03);
+}
+
+@media (max-width: 1520px) {
+  .menu .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu .container .dishes_container .card img {
+    height: 325px;
+  }
+
+  .menu .container .dishes_container .card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu .container .dishes_container .card {
+    width: 50%;
+  }
+
+  .menu .container .dishes_container .card img {
+    height: auto;
+  }
+
+  .menu .container .dishes_container .card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu .container .dishes_container .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .menu .container .dishes_container .card {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+/*********************************************************************************************************************/
+
+/* TEAM COMPONENT STYLING */
+/*********************************************************************************************************************/
+.team {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+
+}
+
+.team .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team .container .heading_section {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.team .container .heading_section p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.team .container .team_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent for glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 15px;
+}
+
+.team .container .team_container .card {
+  width: 25%;
+  padding: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team .container .team_container .card img {
+  width: 175px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.team .container .team_container .card h3 {
+  font-size: 1.5rem;
+}
+
+.team .container .team_container .card p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+}
+
+@media (max-width: 1520px) {
+  .team .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .team .container .team_container .card img {
+    width: 135px;
+  }
+}
+
+@media (max-width: 910px) {
+  .team .container .team_container .card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .team .container .team_container .card {
+    width: 50%;
+  }
+
+  .team .container .team_container .card img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 550px) {
+  .team .container .team_container .card {
+    width: 100%;
+  }
+
+  .team .container .team_container .card img {
+    width: 150px;
+  }
+}
+
+/*********************************************************************************************************************/
+
+/* WHOAREWE COMPONENT STYLING */
+/*********************************************************************************************************************/
+.who_are_we {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.who_are_we .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+}
+
+.who_are_we .container .text_banner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.who_are_we .container .text_banner .card {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.who_are_we .container .text_banner .card p {
+  color: #333;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.who_are_we .container .image_banner {
+  position: relative;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.who_are_we .container .image_banner img {
+  width: 500px;
+  height: 635px;
+}
+
+.who_are_we .container .image_banner .gradient_bg {
+  position: absolute;
+  left: -80px;
+  top: 0;
+}
+
+@media (max-width: 1520px) {
+  .who_are_we .container {
+    min-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .who_are_we .container .image_banner img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .who_are_we .container .image_banner {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .who_are_we .container .text_banner {
+    flex-direction: row;
+  }
+
+  .who_are_we .container {
+    flex-direction: column;
+  }
+
+  .who_are_we .container .image_banner img {
+    width: 400px;
+  }
+
+  .who_are_we .container .text_banner .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .who_are_we .container .text_banner {
+    flex-direction: column;
+  }
+
+  .who_are_we .container .text_banner .card {
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/*********************************************************************************************************************/
+
+/******************* FOOTER STYLING **************/
+/**********************************************************************************************************************/
+footer {
+  background: #f9fbf2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 20px 20px 10px 20px;
+}
+
+footer .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container .banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container .banner:first-child {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+footer .container .banner:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #111;
+}
+
+footer .container .banner:first-child .left {
+  font-size: 1.3rem;
+}
+
+footer .container .banner:last-child .left {
+  font-size: 18px;
+  color: #333;
+}
+
+footer .container .banner:last-child .left a {
+  color: #333;
+}
+
+footer .container .banner .right {
+  font-size: x-large;
+  text-align: end;
+  font-size: 18px;
+  color: #333;
+}
+
+@media (max-width: 1520px) {
+  footer .container {
+    min-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  footer .container .banner:first-child {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer .container .banner:first-child .left,
+  footer .container .banner .right {
+    text-align: center;
+  }
+
+  footer .container .banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 7px;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/******************* RESERVATION COMPONENT STYLING **************/
+/**********************************************************************************************************************/
+.reservation {
+  display: flex;
+  min-height: 100vh;
+  /* Full page height */
+  padding: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  /* background: url(/background.svg); */
+  background: url(/reserve.svg);
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+}
+
+.reservation .container {
+  max-width: 90vw;
+  /* Updated to be responsive */
+  min-width: 90vw;
+  /* Makes it flexible while ensuring the layout scales */
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows content to wrap on smaller screens */
+}
+
+.reservation .container .banner {
+  width: 50%;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.reservation .container .banner .reservation_form_box {
+  width: 100%;
+  background: #fff;
+  min-height: 100%;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  /* Softened shadow for design */
+}
+
+.reservation .container .banner .reservation_form_box:hover {
+  box-shadow: 0 0 25px rgba(152, 87, 191, 0.75);
+  /* Simplified shadow */
+}
+
+.reservation .container .banner .reservation_form_box form div {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.reservation .container .banner .reservation_form_box form div input {
+  flex: 1;
+  padding: 10px;
+  /* Increased padding for larger screens */
+  font-size: 16px;
+  font-weight: 300;
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+}
+
+.reservation .container .banner .reservation_form_box form input[type="email"],
+.reservation .container .banner .reservation_form_box form input[type="number"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+}
+
+.reservation .container .banner .reservation_form_box form div input:focus,
+.reservation .container .banner .reservation_form_box form input[type="number"]:focus,
+.reservation .container .banner .reservation_form_box form input[type="email"]:focus,
+.reservation .container .banner .reservation_form_box form div select:focus {
+  outline: none;
+  border-bottom: 2px solid skyblue;
+}
+
+.reservation .container .banner .reservation_form_box form #res_div {
+  justify-content: center;
+}
+
+.reservation .container .banner .reservation_form_box form div select {
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #333;
+  width: 50%;
+  background: transparent;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.reservation .container .banner .reservation_form_box form div input::placeholder {
+  color: #222;
+}
+
+.reservation .container .banner .reservation_form_box h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  color: #111;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reservation .container .banner .reservation_form_box p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reservation .container .banner:first-child {
+  display: flex;
+  justify-content: center;
+}
+.reservation .container .banner img {
+  width: 100%;
+  max-width: 600px;
+  /* Prevent image from getting too large */
+}
+.reservation .container .banner .reservation_form_box form .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap as needed */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  max-width: 100%; /* Ensure the container does not exceed the viewport width */
+  padding: 0 10px; /* Add padding to prevent overflow */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.reservation .container .banner .reservation_form_box form button,
+.reservation .container .banner .reservation_form_box form .buttons a {
+  border: 1px solid black;
+  padding: 10px 20px; /* Adjust padding to fit within the viewport */
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: #111;
+  background: transparent;
+  margin-top: 20px; /* Adjust margin to fit within the viewport */
+  margin-bottom: 20px; /* Adjust margin to fit within the viewport */
+  max-width: 100%; /* Ensure buttons do not exceed the viewport width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.reservation .container .banner .reservation_form_box form button:hover,
+.reservation .container .banner .reservation_form_box form .buttons a:hover {
+  color: #f8f8f8;
+  background-color: #000000;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.reservation .container .banner .reservation_form_box form button span,
+.reservation .container .banner .reservation_form_box form .buttons a span {
+  margin-left: 1rem;
+  padding: 2px;
+  background: #111;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 18px;
+}
+
+.reservation .container .banner .reservation_form_box form button:hover span,
+.reservation .container .banner .reservation_form_box form .buttons a:hover span {
+  color: #000000;
+  background-color: #ffffff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .reservation .container .banner .reservation_form_box form .buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+
+  .reservation .container .banner .reservation_form_box form button,
+  .reservation .container .banner .reservation_form_box form .buttons a {
+    width: 100%; /* Make buttons full width on smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+@media (max-width: 1520px) {
+  .reservation .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .reservation .container .banner {
+    width: 100%;
+    /* Full width on smaller screens */
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .reservation .container .banner {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .reservation .container .banner img {
+    width: 42vw;
+  }
+}
+
+@media (max-width: 885px) {
+  .reservation .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .reservation .container .banner img {
+    width: 70vw;
+  }
+  
+  .reservation .container .banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .reservation .container .banner img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .reservation .container .banner .reservation_form_box {
+    width: 100%;
+  }
+
+  .reservation .container .banner .reservation_form_box h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 325px) {
+  .reservation .container .banner .reservation_form_box h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/******************* NOT FOUND PAGE STYLING **************/
+/**********************************************************************************************************************/
+.notFound {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url(/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.notFound .container {
+  max-width: 1500px;
+  text-align: center;
+}
+
+.notFound .container img {
+  margin-bottom: 2rem;
+}
+
+.notFound .container h1 {
+  font-size: 2.75rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.notFound .container p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.notFound .container a {
+  border: 1px solid black;
+  padding: 8px 28px;
+  border-radius: 30px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+}
+
+.notFound .container a span {
+  margin-left: 1rem;
+  padding: 6px;
+  background: #111;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.notFound .container a:hover {
+  color: #fff;
+  background: #111;
+  transition: ease-in-out 0.3s;
+}
+
+.notFound .container a:hover span {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .notFound {
+    padding: 30px 20px;
+  }
+
+  .notFound .container img {
+    width: 100%;
+  }
+
+  .notFound .container h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/*********************************************** MENU PAGE STYLING ****************************************************/
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.menu-container .back-to-home-btn{
+  position: fixed;
+  left: 5;
+}
+.menu-title {
+  font-size: 3rem;
+  color: #e63946;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto multiple rows */
+  gap: 20px;
+  justify-content: space-around; /* Evenly spaces items */
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevents children from overflowing */
+}
+
+.menu-item {
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  width: calc(33.33% - 20px); /* Ensures three items per row */
+  max-width: 250px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  transform-origin: center;
+  margin: 20px;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-color: #e63946;
+}
+
+.burger-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.menu-item:hover .burger-image {
+  transform: scale(1.05);
+}
+
+.menu-link {
+  display: block;
+  font-size: 1.5rem;
+  color: #1d3557;
+  text-decoration: none;
+  padding: 15px;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #e63946;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-item {
+    width: calc(50% - 20px); /* Two items per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    width: 100%; 
+  }
+}
