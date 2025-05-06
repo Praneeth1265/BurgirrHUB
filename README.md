@@ -126,9 +126,8 @@ BurgirrHUB/
 ### Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd new
-- File Structure
+git clone https://github.com/Praneeth1265/BurgirrHUB.git
+cd BurgirrHUB
 ```
 
 ### Backend Setup
